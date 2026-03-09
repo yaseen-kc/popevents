@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: EventPageProps): Promise<Meta
       canonical: `/events/${slug}`,
     },
     openGraph: {
-      type: "event",
+      type: "website",
       url: `/events/${slug}`,
       title: `${title} | Pop Events`,
       description: metaDescription,
