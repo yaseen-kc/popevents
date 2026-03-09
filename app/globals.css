@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ============================================
+   Tailwind Theme Configuration
+   ============================================ */
+@theme {
+  /* Brand Colors */
+  --color-racing-green: #13261b;
+  --color-racing-green-dark: #1a3424;
+  --color-racing-green-darker: #0f1e15;
+
+  /* Text and UI Colors */
+  --color-corduroy: #5e6b64;
+  --color-porcelain: #f3f6f5;
+  --color-white: #ffffff;
+  --color-gray-border: #969696;
+  --color-light-gray: #e5e5e5;
+  --color-light-bg: #f9fbfa;
+
+  /* Category Colors */
+  --color-planning: #d32f2f;
+  --color-industry: #1976d2;
+  --color-tips: #f57c00;
+  --color-trends: #7b1fa2;
+}
+
+/* ============================================
+   Global Scroll Behavior
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  transition: filter 0.3s ease;
+}
+
+/* ============================================
+   CSS Variables - Color Palette (for legacy CSS usage)
+   ============================================ */
+:root {
+  --color-racing-green: #13261b;
+  --color-corduroy: #5e6b64;
+  --color-porcelain: #f3f6f5;
+  --color-white: #ffffff;
+}
+
+/* ============================================
+   Font Utilities
+   ============================================ */
+.font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+.font-be-vietnam-pro {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+}
+
+/* ============================================
+   Pulsing Animation for Badge Dot
+   ============================================ */
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.74;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.29;
+    transform: scale(1.1);
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ============================================
+   Dark Mode Color Inversion (Dark Reader Style)
+   ============================================ */
+
+/* Apply color inversion to the entire page in dark mode */
+html[data-theme="dark"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Restore original appearance for images, videos, SVGs, and iframes */
+html[data-theme="dark"] img,
+html[data-theme="dark"] video,
+html[data-theme="dark"] svg,
+html[data-theme="dark"] iframe,
+html[data-theme="dark"] canvas,
+html[data-theme="dark"] [style*="background-image"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Optional: Preserve certain elements from inversion */
+html[data-theme="dark"] [data-no-invert] {
+  filter: none;
+}
+
+/* Keep certain sections (like Footer) in light mode when the page inverts */
+html[data-theme="dark"] [data-stay-light] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Avoid triple-inverting media within light-mode sections */
+html[data-theme="dark"] [data-stay-light] img,
+html[data-theme="dark"] [data-stay-light] video,
+html[data-theme="dark"] [data-stay-light] svg,
+html[data-theme="dark"] [data-stay-light] iframe,
+html[data-theme="dark"] [data-stay-light] canvas,
+html[data-theme="dark"] [data-stay-light] [style*="background-image"] {
+  filter: none;
+}

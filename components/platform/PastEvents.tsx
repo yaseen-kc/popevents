@@ -1,0 +1,86 @@
+import Image from "next/image";
+import Link from "next/link";
+import {
+  PREVIOUS_EVENTS,
+  type TopEvent,
+} from "@/constants/entities/events";
+
+/**
+ * Responsive sizes descriptor for event card imagery.
+ * Cards are full-width on mobile and approximately 1/4 width on large screens.
+ */
+const EVENT_CARD_IMAGE_SIZES =
+  "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 25vw, 300px";
+
+function EventCard(event: TopEvent) {
+  return (
+    <Link
+      href={`/events/${event.id}`}
+      className="flex h-full flex-col gap-4 rounded-xl bg-porcelain overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#7C3AED]"
+      aria-label={event.title}
+    >
+      <div className="relative aspect-4/5 w-full overflow-hidden rounded-t-xl">
+        <Image
+          src={event.image.src}
+          alt={event.image.alt}
+          fill
+          sizes={EVENT_CARD_IMAGE_SIZES}
+          className="object-cover"
+          priority={event.id === "majid-al-mohandis"}
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col gap-2 px-3 pb-3">
+        <h3 className="font-poppins text-[22px] font-normal leading-[26px] tracking-[-0.44px] text-racing-green md:text-2xl md:leading-[29px] md:tracking-[-0.48px] line-clamp-2">
+          {event.title}
+        </h3>
+
+        {/* <div className="flex flex-col gap-1">
+          <div className="font-poppins text-base font-semibold leading-[22px] text-racing-green">
+            {event.price}
+          </div>
+        </div> */}
+
+        <span className="font-poppins text-sm leading-[20px] text-corduroy">
+          {event.dateRange}
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+export default function PastEvents({
+  className = "",
+}: {
+  className?: string;
+}) {
+  return (
+    <section
+      className={`flex flex-col items-center bg-white px-4 py-12 md:px-8 md:py-16 lg:px-[48px] xl:px-[160px] ${className}`}
+      id="previous-events"
+    >
+      <div className="flex w-full max-w-[1280px] flex-col gap-8">
+        <div className="flex w-full items-center justify-between">
+          <div className="flex items-center gap-3">
+            <h2 className="font-poppins text-[34px] font-semibold leading-[37px] tracking-[-1.36px] text-racing-green md:text-[40px] md:leading-[44px] md:tracking-[-1.6px]">
+              Past Events
+            </h2>
+          </div>
+
+          <Link
+            href="/events"
+            className="font-poppins text-base font-semibold leading-6 text-racing-green transition hover:opacity-80"
+          >
+            Show all
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          {PREVIOUS_EVENTS.slice(0, 4).map((event) => (
+            <EventCard key={event.id} {...event} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
