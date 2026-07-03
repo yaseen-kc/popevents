@@ -194,6 +194,28 @@ export async function getUpcomingEvents(language: 'en' | 'ar' = 'en'): Promise<T
   return getTopEventsForLanguage(language);
 }
 
+/**
+ * Get in-progress top events for platform page
+ *
+ * @param language - Language code ('en' or 'ar')
+ * @returns Array of in-progress top events
+ */
+export async function getInProgressEvents(language: 'en' | 'ar' = 'en'): Promise<TopEvent[]> {
+  // Future: return await api.get('/events/in-progress', { params: { lang: language } });
+  return getInProgressTopEventsForLanguage(language);
+}
+
+/**
+ * Get past (completed) top events for platform page
+ *
+ * @param language - Language code ('en' or 'ar')
+ * @returns Array of past top events
+ */
+export async function getPastTopEvents(language: 'en' | 'ar' = 'en'): Promise<TopEvent[]> {
+  // Future: return await api.get('/events/past', { params: { lang: language } });
+  return getPastTopEventsForLanguage(language);
+}
+
 // Helper functions for backward compatibility (defaults to English)
 const mockUpcomingEvents = getTopEventsForLanguage('en');
 const mockPreviousTopEvents = getPastTopEventsForLanguage('en');

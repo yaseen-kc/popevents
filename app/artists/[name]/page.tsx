@@ -18,16 +18,16 @@ const ARTIST_DETAIL_MAP = getArtistDetailMap();
 // ============================================
 
 interface ArtistPageProps {
-  params: {
+  params: Promise<{
     name: string;
-  };
+  }>;
 }
 
 // ============================================
 // Route Metadata
 // ============================================
 export async function generateMetadata({ params }: ArtistPageProps) {
-  const { name } = await Promise.resolve(params);
+  const { name } = await params;
   const artistDetail = ARTIST_DETAIL_MAP[name];
 
   if (!artistDetail) {
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: ArtistPageProps) {
  * @returns Artist page element
  */
 export default async function ArtistPage({ params }: ArtistPageProps) {
-  const { name } = await Promise.resolve(params);
+  const { name } = await params;
 
   if (!ARTIST_DETAIL_MAP[name]) {
     notFound();

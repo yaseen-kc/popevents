@@ -6,29 +6,25 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import EventHero from "@/components/events/EventHero";
-import EventInfo from "@/components/events/EventInfo";
-import HowToGetThere from "@/components/events/HowToGetThere";
-import TermsAndCondition from "@/components/events/TermsAndCondition";
+import EventDetails from "@/components/events/EventDetails";
 import {
   getEventHeroContentBySlug,
   getEventLocation,
   getEventStatus,
-  getEventTerms,
 } from "@/constants/entities/events";
-import type { EventHeroContent, HowToGetThereProps, TermsAndConditionData } from "@/types/event-tickets";
+import type { EventHeroContent } from "@/types/event-tickets";
 
 const DEFAULT_LANGUAGE: "en" | "ar" = "en";
 const SITE_BASE_URL = "https://popevents.com";
 
 interface EventPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: EventPageProps): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug } = await params;
   const language = DEFAULT_LANGUAGE;
 
   const [heroContent, status] = await Promise.all([
@@ -89,13 +85,12 @@ export async function generateMetadata({ params }: EventPageProps): Promise<Meta
  * @returns Event tickets page element
  */
 export default async function EventTicketsPage({ params }: EventPageProps) {
-  const slug = params.slug;
+  const { slug } = await params;
   const language = DEFAULT_LANGUAGE;
 
-  const [eventContent, location, terms, status] = await Promise.all([
+  const [eventContent, location, status] = await Promise.all([
     getEventHeroContentBySlug(slug, language),
     getEventLocation(slug, language),
-    getEventTerms(slug, language),
     getEventStatus(slug),
   ]);
 
@@ -179,10 +174,7 @@ export default async function EventTicketsPage({ params }: EventPageProps) {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify([eventSchema, breadcrumbSchema]) }}
       />
-      <EventHero slides={eventContent.slides} badge={eventContent.badge} />
-      <EventInfo {...eventContent.info} isCompleted={isCompleted} />
-      {!isCompleted && terms && <TermsAndCondition termsAndCondition={terms as TermsAndConditionData} />}
-      {!isCompleted && location && <HowToGetThere {...(location as HowToGetThereProps)} isCompleted={isCompleted} />}
+      <EventDetails slug={slug} />
     </main>
   );
 }

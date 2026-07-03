@@ -1,9 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  PREVIOUS_EVENTS,
-  type TopEvent,
-} from "@/constants/entities/events";
+import { getPastTopEvents, type TopEvent } from "@/constants/entities/events";
+import { PLATFORM_LABELS } from "@/constants/config/ui";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 /**
  * Responsive sizes descriptor for event card imagery.
@@ -54,6 +56,29 @@ export default function PastEvents({
 }: {
   className?: string;
 }) {
+  const { language } = useTranslation();
+  const [events, setEvents] = useState<TopEvent[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    async function load() {
+      const data = await getPastTopEvents(language);
+      if (active) {
+        setEvents(data);
+      }
+    }
+    load();
+    return () => {
+      active = false;
+    };
+  }, [language]);
+
+  if (events.length === 0) {
+    return null;
+  }
+
+  const labels = PLATFORM_LABELS[language];
+
   return (
     <section
       className={`flex flex-col items-center bg-white px-4 py-12 md:px-8 md:py-16 lg:px-[48px] xl:px-[160px] ${className}`}
@@ -63,7 +88,7 @@ export default function PastEvents({
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-3">
             <h2 className="font-poppins text-[34px] font-semibold leading-[37px] tracking-[-1.36px] text-racing-green md:text-[40px] md:leading-[44px] md:tracking-[-1.6px]">
-              Past Events
+              {labels.pastEvents}
             </h2>
           </div>
 
@@ -71,12 +96,12 @@ export default function PastEvents({
             href="/events"
             className="font-poppins text-base font-semibold leading-6 text-racing-green transition hover:opacity-80"
           >
-            Show all
+            {labels.showAll}
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
-          {PREVIOUS_EVENTS.slice(0, 4).map((event) => (
+          {events.slice(0, 4).map((event) => (
             <EventCard key={event.id} {...event} />
           ))}
         </div>

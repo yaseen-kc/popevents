@@ -107,3 +107,37 @@ export const HOTLINE_HOURS = {
   ar: "الأحد - الخميس 9:00 - 17:00",
 } as const;
 
+/**
+ * Platform page static UI labels (section headings, links, CTA text)
+ */
+export const PLATFORM_LABELS = {
+  en: {
+    /** Upcoming Events section heading */
+    upcomingEvents: "Upcoming Events",
+    /** Past Events section heading */
+    pastEvents: "Past Events",
+    /** Venues section heading */
+    venues: "Venues",
+    /** Popular artists section heading */
+    popularArtists: "Popular artists",
+    /** Shared "show all" link label */
+    showAll: "Show all",
+    /** CTA contact heading */
+    ctaHeading: "Do you have any questions? Please contact us",
+    /** CTA chat online button */
+    chatOnline: "Chat online",
+    /** CTA ticket hotline label */
+    ticketHotline: "ticket hotline",
+  },
+  ar: {
+    upcomingEvents: "الفعاليات القادمة",
+    pastEvents: "الفعاليات السابقة",
+    venues: "الأماكن",
+    popularArtists: "الفنانون المشهورون",
+    showAll: "عرض الكل",
+    ctaHeading: "هل لديك أي أسئلة؟ يرجى التواصل معنا",
+    chatOnline: "الدردشة عبر الإنترنت",
+    ticketHotline: "الخط الساخن للتذاكر",
+  },
+} as const;
+

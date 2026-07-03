@@ -17,9 +17,9 @@ import Content from "@/components/services/Content";
 // Type Definitions
 // ============================================
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // ============================================
@@ -33,7 +33,7 @@ interface ServicePageProps {
  * @returns Services page element
  */
 export default async function ServicesPage({ params }: ServicePageProps) {
-  const { slug } = await Promise.resolve(params);
+  const { slug } = await params;
 
   // Check if slug exists in either language version
   if (!SERVICE_HERO_CONTENT_MAP.en[slug] && !SERVICE_HERO_CONTENT_MAP.ar[slug]) {

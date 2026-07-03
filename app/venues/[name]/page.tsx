@@ -18,16 +18,16 @@ const VENUE_DETAIL_MAP = getVenueDetailMap();
 // ============================================
 
 interface VenuePageProps {
-  params: {
+  params: Promise<{
     name: string;
-  };
+  }>;
 }
 
 // ============================================
 // Route Metadata
 // ============================================
 export async function generateMetadata({ params }: VenuePageProps) {
-  const { name } = await Promise.resolve(params);
+  const { name } = await params;
   const venueDetail = VENUE_DETAIL_MAP[name];
 
   if (!venueDetail) {
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: VenuePageProps) {
  * @returns Venue page element
  */
 export default async function VenuePage({ params }: VenuePageProps) {
-  const { name } = await Promise.resolve(params);
+  const { name } = await params;
 
   if (!VENUE_DETAIL_MAP[name]) {
     notFound();

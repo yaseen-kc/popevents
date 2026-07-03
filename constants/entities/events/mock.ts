@@ -89,6 +89,280 @@ export type EventDetail = {
  * This is the single source of truth for all event data
  */
 export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDetail }> = {
+  "mina-nader-live-muscat": {
+    en: {
+      id: "mina-nader-live-muscat",
+      status: "in-progress",
+      heroContent: {
+        slug: "mina-nader-live-muscat",
+        slides: [
+          {
+            id: "mina-nader-1",
+            image: {
+              src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-1600x615.webp",
+              alt: "Comedy Show with Mina Nader in Muscat",
+            },
+          },
+        ],
+        badge: "",
+        info: {
+          title: "Comedy Show with Mina Nader in Muscat",
+          shortDescription:
+            "Celebrate comedy with Mina Nader in a night full of joyful moments.",
+          location: "Middle East College Theater, Muscat, Sultanate of Oman",
+          locationUrl: "https://maps.app.goo.gl/RkiBegM8QmVsNe7f6",
+          ticketUrl: "https://muscat.platinumlist.net/event-tickets/107079/comedy-show-with-mina-nader",
+          date: "Fri 31 Jul",
+          description: [
+            "The Stand-Up Comedy Show presented by Bob Event’s W.L.L. is a world-class live entertainment experience that brings together humor, creativity, and culture on one stage.",
+            "Featuring top-tier comedians from the Arab world and beyond, the event promises an unforgettable night filled with laughter, interaction, and energy.",
+            "This event aims to enrich the entertainment scene in Muscat, Sultanate of Oman by hosting international-level performances that cater to diverse audiences.",
+            "Guests will enjoy a high-quality production with professional sound, lighting, and hospitality that reflect Bob Event’s commitment to excellence.",
+            "Whether you're a comedy lover or simply looking for an enjoyable evening, this show guarantees a unique experience full of joy, creativity, and unforgettable moments.",
+          ],
+          priceFrom: "20 OMR",
+        },
+      },
+      location: {
+        venueName: "Middle East College Theater",
+        venueAddress: "Middle East College Theater, Muscat, Sultanate of Oman",
+        directionsUrl: "https://maps.app.goo.gl/RkiBegM8QmVsNe7f6",
+        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d272.9052687456595!2d58.1661192726871!3d23.568798232850238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de353a977aea5%3A0xdfd04826de93780d!2z2YXYs9ix2K0g2YPZhNmK2Kkg2KfZhNi02LHZgiDYp9mE2KPZiNiz2Lc!5e1!3m2!1sen!2sin!4v1783111242296!5m2!1sen!2sin",
+        byCarInstructions:
+          "There are many ways to reach the venue, including heading northwest on Al Jameah Street, turning left, continuing straight, and following the remaining turns to the destination. GPS navigation is highly recommended.",
+        byTaxiInstructions:
+          "You can easily reach the venue by taxi or by using any ride-hailing application.",
+      },
+      topEvent: {
+        id: "mina-nader-live-muscat",
+        title: "Comedy Show with Mina Nader in Muscat",
+        price: "From 20 OMR",
+        dateRange: "",
+        image: {
+          src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-706x706.webp",
+          alt: "Comedy Show with Mina Nader in Muscat poster",
+        },
+      },
+      termsAndCondition: [
+        {
+          title: "Tickets and Entry",
+          items: [
+            "All tickets are non-refundable and non-transferable under any circumstances, except in case of event cancellation by the organizer.",
+            "Entry is permitted only with a valid ticket and matching ID.",
+            "The organizer reserves the right to deny entry to guests who fail to comply with event rules or behave inappropriately.",
+          ],
+        },
+        {
+          title: "Event Schedule",
+          items: [
+            "The event start time will be announced in advance.",
+            "Guests are encouraged to arrive at least 30 minutes before showtime.",
+            "Late arrivals may be denied entry until an appropriate break in the performance.",
+          ],
+        },
+        {
+          title: "Photography and Recording",
+          items: [
+            "Photography, video recording, or live streaming is strictly prohibited during the performance.",
+            "Guests violating this rule may be removed from the venue.",
+          ],
+        },
+        {
+          title: "Age Restriction",
+          items: [
+            "The show is intended for audiences aged 18 years and above.",
+            "Guests under 18 years of age will not be admitted, even if accompanied by an adult.",
+          ],
+        },
+        {
+          title: "Code of Conduct",
+          items: [
+            "Guests must behave respectfully toward the artists, staff, and fellow attendees.",
+            "Disruptive or offensive behavior will result in immediate removal without refund.",
+          ],
+        },
+        {
+          title: "Liability Disclaimer",
+          items: [
+            "The organizer is not responsible for any personal injury, loss, or damage to personal property during the event.",
+            "Attendance is entirely at the guest's own risk.",
+          ],
+        },
+        {
+          title: "Event Changes",
+          items: [
+            "The organizer reserves the right to change the event date, time, venue, or lineup due to unforeseen circumstances.",
+            "In case of rescheduling, tickets will remain valid for the new date.",
+          ],
+        },
+        {
+          title: "Security and Safety",
+          items: [
+            "All guests are subject to security checks upon entry.",
+            "Weapons, alcohol, and outside food or drinks are strictly prohibited inside the venue.",
+          ],
+        },
+        {
+          title: "Use of Media",
+          items: [
+            "By attending the event, guests consent to being photographed or recorded for promotional or archival purposes related to the event or organizer.",
+          ],
+        },
+        {
+          title: "Event Disclaimer",
+          items: [
+            "This is a live stand-up comedy performance intended solely for entertainment purposes.",
+            "The performance may include satire, humor, personal experiences, and social commentary that some audience members may find provocative or controversial.",
+            "By purchasing a ticket and attending the event, guests acknowledge that the performance is artistic in nature and that humor is subjective.",
+            "The Talent, MPAD, and Pop Event's W.L.L. shall not be liable for any claims of defamation, reputational harm, emotional distress, or offense arising from the content of the performance.",
+            "Attendees voluntarily assume all risks associated with attending a live performance, including exposure to language, themes, or humor that may not align with their personal views.",
+            "Audience members expressly waive any claims or legal actions against the Talent, MPAD, and the Organizer relating to the nature or content of the performance.",
+            "All ticket sales are final. Refunds or exchanges will not be provided based on reactions to the event content, subject to applicable law.",
+          ],
+        },
+        {
+          title: "Photography and Media",
+          items: [
+            "The event may be recorded, photographed, or livestreamed for promotional or archival purposes.",
+            "By attending, guests consent to the use of their image, voice, and likeness without compensation or prior notice.",
+            "Guests who do not wish to be photographed or recorded should refrain from attending the event.",
+          ],
+        },
+        {
+          title: "Legal Waiver",
+          items: [
+            "To the fullest extent permitted by law, attendees waive any claims against the Talent, MPAD, and the Organizer relating to emotional distress, reputational harm, or offense arising from the performance.",
+            "Attendance is voluntary, and guests acknowledge they have been informed about the nature of the event before purchasing tickets.",
+          ],
+        },
+        {
+          title: "Recording and Intellectual Property",
+          items: [
+            "Recording, photographing, or livestreaming any part of the performance is strictly prohibited without prior written consent from MPAD.",
+            "All recordings, broadcasts, and related content remain the exclusive property of MPAD.",
+            "Unauthorized recording, reproduction, distribution, or use may violate intellectual property laws and may result in legal action.",
+          ],
+        },
+        {
+          title: "Organizer Information",
+          items: [
+            "Event organized by Pop Event's W.L.L., Sultanate of Oman.",
+            "Contact: +973 39308861 | popevents95@gmail.com",
+          ],
+        },
+      ],
+    },
+
+    ar: {
+      id: "mina-nader-live-muscat",
+      status: "completed",
+      heroContent: {
+        slug: "mina-nader-live-muscat",
+        slides: [
+          {
+            id: "mina-nader-1",
+            image: {
+              src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-1600x615.webp",
+              alt: "عرض مينا نادر الكوميدي في مسقط",
+            },
+          },
+        ],
+        badge: "",
+        info: {
+          title: "عرض مينا نادر الكوميدي في مسقط",
+          shortDescription:
+            "احتفل بالكوميديا مع مينا نادر في ليلة مليئة بالضحك واللحظات السعيدة.",
+          location: "مسرح كلية الشرق الأوسط، مسقط، سلطنة عمان",
+          locationUrl: "",
+          ticketUrl: "",
+          date: "",
+          description: [
+            "يقدم Bob Event’s W.L.L. عرض ستاند أب كوميدي عالمي يجمع بين الفكاهة والإبداع والثقافة على مسرح واحد.",
+            "يشارك في العرض نخبة من أشهر الكوميديين من العالم العربي وخارجه، في ليلة مليئة بالضحك والتفاعل والطاقة.",
+            "يهدف الحدث إلى إثراء المشهد الترفيهي في سلطنة عمان من خلال استضافة عروض عالمية المستوى تناسب مختلف الجماهير.",
+            "سيستمتع الحضور بإنتاج احترافي يشمل أنظمة صوت وإضاءة وضيافة عالية الجودة تعكس التزام Bob Event’s بالتميز.",
+            "سواء كنت من عشاق الكوميديا أو تبحث عن أمسية ممتعة، فإن هذا العرض سيمنحك تجربة مليئة بالمرح والإبداع والذكريات الجميلة.",
+          ],
+          priceFrom: "20 OMR",
+        },
+      },
+      location: {
+        venueName: "مسرح كلية الشرق الأوسط",
+        venueAddress: "مسرح كلية الشرق الأوسط، مسقط، سلطنة عمان",
+        directionsUrl: "https://maps.app.goo.gl/RkiBegM8QmVsNe7f6",
+        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d272.9052687456595!2d58.1661192726871!3d23.568798232850238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8de353a977aea5%3A0xdfd04826de93780d!2z2YXYs9ix2K0g2YPZhNmK2Kkg2KfZhNi02LHZgiDYp9mE2KPZiNiz2Lc!5e1!3m2!1sen!2sin!4v1783111242296!5m2!1sen!2sin",
+        byCarInstructions:
+          "يمكن الوصول إلى الموقع عبر شارع الجامعة ثم اتباع الطريق حسب نظام الملاحة. يُنصح باستخدام GPS للوصول بسهولة.",
+        byTaxiInstructions:
+          "يمكن الوصول بسهولة باستخدام سيارة أجرة أو أحد تطبيقات النقل.",
+      },
+      topEvent: {
+        id: "mina-nader-live-muscat",
+        title: "عرض مينا نادر الكوميدي في مسقط",
+        price: "20 OMR",
+        dateRange: "",
+        image: {
+          src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-706x706.webp",
+          alt: "ملصق عرض مينا نادر في مسقط",
+        },
+      },
+      termsAndCondition: [
+        {
+          title: "التذاكر والدخول",
+          items: [
+            "جميع التذاكر غير قابلة للاسترجاع أو التحويل إلا في حالة إلغاء الحدث من قبل المنظم.",
+            "يسمح بالدخول فقط بتذكرة سارية وهوية مطابقة.",
+            "يحتفظ المنظم بحق رفض دخول أي شخص لا يلتزم بقواعد الحدث.",
+          ],
+        },
+        {
+          title: "جدول الحدث",
+          items: [
+            "سيتم الإعلان عن موعد بدء العرض مسبقاً.",
+            "يُنصح بالحضور قبل 30 دقيقة على الأقل.",
+            "قد يتم تأخير دخول المتأخرين حتى فترة استراحة مناسبة.",
+          ],
+        },
+        {
+          title: "التصوير والتسجيل",
+          items: [
+            "يُمنع منعاً باتاً التصوير أو تسجيل الفيديو أو البث المباشر أثناء العرض.",
+            "قد يتم إخراج أي شخص يخالف هذه التعليمات.",
+          ],
+        },
+        {
+          title: "قيود العمر",
+          items: [
+            "العرض مخصص لمن تبلغ أعمارهم 18 عاماً فما فوق.",
+            "لن يُسمح بدخول من هم دون 18 عاماً حتى مع مرافقة ولي أمر.",
+          ],
+        },
+        {
+          title: "إخلاء المسؤولية والحقوق القانونية",
+          items: [
+            "العرض مخصص للترفيه فقط وقد يتضمن السخرية والتعليق الاجتماعي.",
+            "بشراء التذكرة، يقر الحضور بأن الفكاهة مسألة ذوق شخصي وأن العرض ذو طبيعة فنية.",
+            "يتنازل الحضور عن أي مطالبات ضد الفنان أو MPAD أو المنظم تتعلق بالإساءة أو الضرر المعنوي أو المحتوى الكوميدي.",
+          ],
+        },
+        {
+          title: "الملكية الفكرية",
+          items: [
+            "يُمنع تسجيل أو تصوير أي جزء من العرض دون موافقة خطية مسبقة من MPAD.",
+            "جميع حقوق التسجيل والبث والمحتوى تعود حصرياً إلى MPAD.",
+            "أي استخدام غير مصرح به قد يؤدي إلى اتخاذ إجراءات قانونية.",
+          ],
+        },
+        {
+          title: "معلومات المنظم",
+          items: [
+            "الحدث من تنظيم Pop Event's W.L.L.، سلطنة عمان.",
+            "للتواصل: +973 39308861 | popevents95@gmail.com",
+          ],
+        },
+      ],
+    },
+  },
   "mohamed-helmy-live-bahrain": {
     en: {
       id: "mohamed-helmy-live-bahrain",
@@ -866,7 +1140,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
             },
           },
         ],
-        badge: "International Show",
+        badge: "",
         info: {
           title: "Mina Nader Interactive Comedy Show",
           shortDescription:
@@ -1129,6 +1403,16 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
 export const mockHeroEvents: Record<'en' | 'ar', HeroEvent[]> = {
   en: [
     {
+      id: "mina-nader-live-muscat",
+      title: "Comedy Show with Mina Nader in Muscat",
+      date: "Fri, 31 Jul 2026",
+      venue: "Middle East College Theater",
+      image: {
+        src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-1600x615.webp",
+        alt: "Comedy Show with Mina Nader in Muscat poster",
+      },
+    },
+    {
       id: "mohamed-helmy-live",
       title: "Mohamed Helmy live in Exhibition World Bahrain",
       date: "Sat, 7 Feb 2026",
@@ -1160,6 +1444,16 @@ export const mockHeroEvents: Record<'en' | 'ar', HeroEvent[]> = {
     },
   ],
   ar: [
+    {
+      id: "mina-nader-live-muscat",
+      title: "عرض مينا نادر الكوميدي في مسقط",
+      date: "الجمعة، 31 يوليو 2026",
+      venue: "مسرح كلية الشرق الأوسط",
+      image: {
+        src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-1600x615.webp",
+        alt: "ملصق عرض مينا نادر الكوميدي في مسقط",
+      },
+    },
     {
       id: "mohamed-helmy-live",
       title: "محمد حلمي مباشر في عالم المعارض البحرين",

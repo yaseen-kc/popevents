@@ -1,7 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Heart } from "lucide-react";
-import { IN_PROGRESS_EVENTS, STATUS_CLASSES, type TopEvent, type UpcomingEventstatus } from "@/constants/entities/events";
+import {
+  getInProgressEvents,
+  STATUS_CLASSES,
+  type TopEvent,
+} from "@/constants/entities/events";
+import { PLATFORM_LABELS } from "@/constants/config/ui";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 function EventCard(event: TopEvent) {
   const statusTone =
@@ -73,17 +82,34 @@ function EventCard(event: TopEvent) {
 }
 
 export default function UpcomingEvents({ className = "" }: { className?: string }) {
-  const hasEvents = IN_PROGRESS_EVENTS.length > 0;
+  const { language } = useTranslation();
+  const [events, setEvents] = useState<TopEvent[]>([]);
 
-  if (!hasEvents) {
+  useEffect(() => {
+    let active = true;
+    async function load() {
+      const data = await getInProgressEvents(language);
+      if (active) {
+        setEvents(data);
+      }
+    }
+    load();
+    return () => {
+      active = false;
+    };
+  }, [language]);
+
+  if (events.length === 0) {
     return null;
   }
+
+  const labels = PLATFORM_LABELS[language];
 
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Featured upcoming events",
-    itemListElement: IN_PROGRESS_EVENTS.slice(0, 4).map((event, index) => ({
+    itemListElement: events.slice(0, 4).map((event, index) => ({
       "@type": "ListItem",
       position: index + 1,
       url: `https://popevents.com/events/${event.id}`,
@@ -105,7 +131,7 @@ export default function UpcomingEvents({ className = "" }: { className?: string 
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-3">
             <h2 className="font-poppins text-[34px] font-semibold leading-[37px] tracking-[-1.36px] text-racing-green md:text-[40px] md:leading-[44px] md:tracking-[-1.6px]">
-              Upcoming Events
+              {labels.upcomingEvents}
             </h2>
           </div>
 
@@ -113,12 +139,12 @@ export default function UpcomingEvents({ className = "" }: { className?: string 
             href="/events"
             className="font-poppins text-base font-semibold leading-6 text-racing-green transition hover:opacity-80"
           >
-            Show all
+            {labels.showAll}
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
-          {IN_PROGRESS_EVENTS.slice(0, 4).map((event) => (
+          {events.slice(0, 4).map((event) => (
             <EventCard key={event.id} {...event} />
           ))}
         </div>

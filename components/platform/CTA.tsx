@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MessageSquareText } from "lucide-react";
 import { SocialIcon } from "react-social-icons";
-import { BRAND_TAGLINE, HOTLINE_NUMBER, HOTLINE_HOURS } from "@/constants/config/ui";
+import { BRAND_TAGLINE, HOTLINE_NUMBER, HOTLINE_HOURS, PLATFORM_LABELS } from "@/constants/config/ui";
 import { useTranslation } from "@/contexts/TranslationContext";
 
 type CTAProps = {
@@ -13,6 +13,7 @@ type CTAProps = {
 
 export default function CTA({ className = "" }: CTAProps) {
   const { language } = useTranslation();
+  const labels = PLATFORM_LABELS[language];
 
   return (
     <section
@@ -49,10 +50,7 @@ export default function CTA({ className = "" }: CTAProps) {
             id="platform-cta-heading"
             className="text-left font-poppins text-[22px] font-semibold leading-[28px] text-[#0F0F15] md:text-[24px] md:leading-[30px] lg:text-[24px]"
           >
-            Do you have any questions?
-            <br className="hidden lg:block" />
-            <span className="md:hidden lg:inline"> </span>
-            Please contact us
+            {labels.ctaHeading}
           </h2>
 
           <div className="flex flex-row items-center gap-3 md:gap-4 lg:gap-5">
@@ -76,7 +74,7 @@ export default function CTA({ className = "" }: CTAProps) {
                 className="h-5 w-5 text-[#221327]"
                 aria-hidden
               />
-              Chat online
+              {labels.chatOnline}
             </Link>
           </div>
         </div>
@@ -84,7 +82,7 @@ export default function CTA({ className = "" }: CTAProps) {
         {/* Right: Hotline */}
         <div className="flex flex-col gap-2 text-left lg:min-w-[220px] lg:items-end">
           <span className="font-poppins text-[16px] font-semibold leading-[20px] text-[#0F0F15]">
-            ticket hotline
+            {labels.ticketHotline}
           </span>
           <span className="font-poppins text-[28px] font-semibold leading-[34px] tracking-[-0.5px] text-[#0F0F15] md:text-[32px] md:leading-[36px]">
             {HOTLINE_NUMBER}

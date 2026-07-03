@@ -1,7 +1,12 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { ARTISTS, type Artist } from "@/constants/entities/artists";
+import { getArtists, type Artist } from "@/constants/entities/artists";
+import { PLATFORM_LABELS } from "@/constants/config/ui";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 function ArtistCard({ artist }: { artist: Artist }) {
   return (
@@ -34,6 +39,29 @@ function ArtistCard({ artist }: { artist: Artist }) {
 }
 
 export default function TopArtists({ className = "" }: { className?: string }) {
+  const { language } = useTranslation();
+  const [artists, setArtists] = useState<Artist[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    async function load() {
+      const data = await getArtists(language);
+      if (active) {
+        setArtists(data);
+      }
+    }
+    load();
+    return () => {
+      active = false;
+    };
+  }, [language]);
+
+  if (artists.length === 0) {
+    return null;
+  }
+
+  const labels = PLATFORM_LABELS[language];
+
   return (
     <section
       className={`flex flex-col items-center bg-white px-4 py-12 md:px-8 md:py-16 lg:px-[48px] xl:px-[160px] ${className}`}
@@ -43,7 +71,7 @@ export default function TopArtists({ className = "" }: { className?: string }) {
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-3">
             <h2 className="font-poppins text-[34px] font-semibold leading-[37px] tracking-[-1.36px] text-[#221327] md:text-[40px] md:leading-[44px] md:tracking-[-1.6px]">
-              Popular artists
+              {labels.popularArtists}
             </h2>
             <ChevronRight className="h-6 w-6 text-[#0F0F15]" aria-hidden="true" />
           </div>
@@ -53,13 +81,13 @@ export default function TopArtists({ className = "" }: { className?: string }) {
             className="hidden items-center gap-1 font-poppins text-base font-semibold leading-6 text-[#6E6E81] transition hover:opacity-80 md:inline-flex"
             aria-label="Show all popular artists"
           >
-            Show all
+            {labels.showAll}
             <ChevronRight className="h-5 w-5" aria-hidden="true" />
           </Link>
         </div>
 
         <div className="flex w-full gap-6 overflow-x-auto pb-2 sm:gap-8 md:gap-10 lg:gap-[28px]">
-          {ARTISTS.slice(0, 4).map((artist) => (
+          {artists.slice(0, 4).map((artist) => (
             <ArtistCard key={artist.id} artist={artist} />
           ))}
         </div>

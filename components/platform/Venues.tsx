@@ -1,7 +1,12 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { VENUES, type Venue } from "@/constants/entities/venues";
+import { getVenues, type Venue } from "@/constants/entities/venues";
+import { PLATFORM_LABELS } from "@/constants/config/ui";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 function VenueCard(venue: Venue) {
   const content = (
@@ -51,6 +56,29 @@ function VenueCard(venue: Venue) {
 }
 
 export default function Venues({ className = "" }: { className?: string }) {
+  const { language } = useTranslation();
+  const [venues, setVenues] = useState<Venue[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    async function load() {
+      const data = await getVenues(language);
+      if (active) {
+        setVenues(data);
+      }
+    }
+    load();
+    return () => {
+      active = false;
+    };
+  }, [language]);
+
+  if (venues.length === 0) {
+    return null;
+  }
+
+  const labels = PLATFORM_LABELS[language];
+
   return (
     <section
       className={`flex flex-col items-center bg-white px-4 py-12 md:px-8 md:py-16 lg:px-[48px] xl:px-[160px] ${className}`}
@@ -60,7 +88,7 @@ export default function Venues({ className = "" }: { className?: string }) {
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-2">
             <h2 className="font-poppins text-[34px] font-semibold leading-[37px] tracking-[-1.36px] text-racing-green md:text-[40px] md:leading-[44px] md:tracking-[-1.6px]">
-              Venues
+              {labels.venues}
             </h2>
             <ArrowRight className="h-5 w-5 text-racing-green" aria-hidden />
           </div>
@@ -69,14 +97,14 @@ export default function Venues({ className = "" }: { className?: string }) {
             href="/venues"
             className="flex items-center gap-2 font-poppins text-base font-semibold leading-6 text-[#6E6E81] transition hover:text-racing-green"
           >
-            Show all
+            {labels.showAll}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
 
         <div className="w-full overflow-hidden">
           <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible lg:grid-cols-3 xl:grid-cols-4">
-            {VENUES.slice(0, 4).map((venue) => (
+            {venues.slice(0, 4).map((venue) => (
               <VenueCard key={venue.id} {...venue} />
             ))}
           </div>
