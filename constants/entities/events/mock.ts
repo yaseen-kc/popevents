@@ -101,6 +101,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
             image: {
               src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-1600x615.webp",
               alt: "Comedy Show with Mina Nader in Muscat",
+              mobileSrc: "/mina-nader-live-muscat/images/mina-nader-live-muscat-398x375.webp",
             },
           },
         ],
@@ -264,6 +265,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
             image: {
               src: "/mina-nader-live-muscat/images/mina-nader-live-muscat-1600x615.webp",
               alt: "عرض مينا نادر الكوميدي في مسقط",
+              mobileSrc: "/mina-nader-live-muscat/images/mina-nader-live-muscat-398x375.webp",
             },
           },
         ],

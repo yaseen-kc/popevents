@@ -8,10 +8,14 @@
  * Image data structure for carousel slides
  */
 export interface EventHeroSlideImage {
-  /** Image source URL */
+  /** Image source URL (used on md screens and up) */
   src: string;
   /** Image alt text */
   alt: string;
+  /** Optional mobile-specific image source shown below the md breakpoint */
+  mobileSrc?: string;
+  /** Optional alt text for the mobile image; falls back to `alt` when omitted */
+  mobileAlt?: string;
 }
 
 /**

@@ -113,6 +113,27 @@ export default function EventHero({
                       loop
                       playsInline
                     />
+                  ) : slide.image.mobileSrc ? (
+                    <>
+                      {/* Mobile image (below md) */}
+                      <Image
+                        src={slide.image.mobileSrc}
+                        alt={slide.image.mobileAlt ?? slide.image.alt}
+                        fill
+                        className="object-cover md:hidden"
+                        priority={index === 0}
+                        sizes="375px"
+                      />
+                      {/* Desktop image (md and up) */}
+                      <Image
+                        src={slide.image.src}
+                        alt={slide.image.alt}
+                        fill
+                        className="object-cover hidden md:block"
+                        priority={index === 0}
+                        sizes="(max-width: 1024px) 688px, (max-width: 1440px) 900px, 1170px"
+                      />
+                    </>
                   ) : (
                     <Image
                       src={slide.image.src}
