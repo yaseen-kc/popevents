@@ -114,10 +114,10 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
           ticketUrl: "https://muscat.platinumlist.net/event-tickets/107079/comedy-show-with-mina-nader",
           date: "Fri 31 Jul",
           description: [
-            "The Stand-Up Comedy Show presented by Bob Event’s W.L.L. is a world-class live entertainment experience that brings together humor, creativity, and culture on one stage.",
+            "The Stand-Up Comedy Show presented by Pop Event’s W.L.L. is a world-class live entertainment experience that brings together humor, creativity, and culture on one stage.",
             "Featuring top-tier comedians from the Arab world and beyond, the event promises an unforgettable night filled with laughter, interaction, and energy.",
             "This event aims to enrich the entertainment scene in Muscat, Sultanate of Oman by hosting international-level performances that cater to diverse audiences.",
-            "Guests will enjoy a high-quality production with professional sound, lighting, and hospitality that reflect Bob Event’s commitment to excellence.",
+            "Guests will enjoy a high-quality production with professional sound, lighting, and hospitality that reflect Pop Event’s commitment to excellence.",
             "Whether you're a comedy lover or simply looking for an enjoyable evening, this show guarantees a unique experience full of joy, creativity, and unforgettable moments.",
           ],
           priceFrom: "20 OMR",
@@ -277,10 +277,10 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
           ticketUrl: "",
           date: "",
           description: [
-            "يقدم Bob Event’s W.L.L. عرض ستاند أب كوميدي عالمي يجمع بين الفكاهة والإبداع والثقافة على مسرح واحد.",
+            "يقدم Pop Event’s W.L.L. عرض ستاند أب كوميدي عالمي يجمع بين الفكاهة والإبداع والثقافة على مسرح واحد.",
             "يشارك في العرض نخبة من أشهر الكوميديين من العالم العربي وخارجه، في ليلة مليئة بالضحك والتفاعل والطاقة.",
             "يهدف الحدث إلى إثراء المشهد الترفيهي في سلطنة عمان من خلال استضافة عروض عالمية المستوى تناسب مختلف الجماهير.",
-            "سيستمتع الحضور بإنتاج احترافي يشمل أنظمة صوت وإضاءة وضيافة عالية الجودة تعكس التزام Bob Event’s بالتميز.",
+            "سيستمتع الحضور بإنتاج احترافي يشمل أنظمة صوت وإضاءة وضيافة عالية الجودة تعكس التزام Pop Event’s بالتميز.",
             "سواء كنت من عشاق الكوميديا أو تبحث عن أمسية ممتعة، فإن هذا العرض سيمنحك تجربة مليئة بالمرح والإبداع والذكريات الجميلة.",
           ],
           priceFrom: "20 OMR",
@@ -487,7 +487,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
         {
           title: "Organizer Information",
           items: [
-            "Event organized by Bob Event's W.L.L, Kingdom of Bahrain.",
+            "Event organized by Pop Event's W.L.L, Kingdom of Bahrain.",
             "Contact: +973 39308861 | popevents95@gmail.com",
           ],
         },
@@ -615,7 +615,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
         {
           title: "معلومات المنظم",
           items: [
-            "الحدث منظم من قبل Bob Event's W.L.L، مملكة البحرين.",
+            "الحدث منظم من قبل Pop Event's W.L.L، مملكة البحرين.",
             "للتواصل: +973 39308861 | popevents95@gmail.com",
           ],
         },
