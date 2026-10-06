@@ -1957,7 +1957,7 @@ export const mockHeroEvents: Record<'en' | 'ar', HeroEvent[]> = {
       date: "Fri, 13 Nov 2026",
       venue: "Exhibition World Bahrain",
       image: {
-        src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+        src: "/disco-misr-live-in-exhibition-world-bahrain/1600x615.jpeg",
         alt: "Disco Misr live in Exhibition World Bahrain poster",
       },
     },
@@ -2019,7 +2019,7 @@ export const mockHeroEvents: Record<'en' | 'ar', HeroEvent[]> = {
       date: "الجمعة، 13 نوفمبر 2026",
       venue: "مركز البحرين العالمي للمعارض",
       image: {
-        src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+        src: "/disco-misr-live-in-exhibition-world-bahrain/1600x615.jpeg",
         alt: "ملصق عرض ديسكو مصر في مركز البحرين العالمي للمعارض",
       },
     },
