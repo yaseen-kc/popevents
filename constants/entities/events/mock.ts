@@ -99,10 +99,10 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
           {
             id: "disco-misr-1",
             image: {
-              src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+              src: "/disco-misr-live-in-exhibition-world-bahrain/1600x615.jpeg",
               alt: "Disco Misr live in Exhibition World Bahrain",
               mobileSrc:
-                "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+                "/disco-misr-live-in-exhibition-world-bahrain/1600x615.jpeg",
             },
           },
         ],
@@ -145,7 +145,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
         price: "From 22 BHD",
         dateRange: "Fri 13 Nov 2026",
         image: {
-          src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-706x706.webp",
+          src: "/disco-misr-live-in-exhibition-world-bahrain/706x706.jpeg",
           alt: "Disco Misr live in Exhibition World Bahrain poster",
         },
       },
@@ -235,10 +235,10 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
           {
             id: "disco-misr-1",
             image: {
-              src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-1600x615.webp",
+              src: "/disco-misr-live-in-exhibition-world-bahrain/1600x615.jpeg",
               alt: "ديسكو مصر مباشر في مركز البحرين العالمي للمعارض",
               mobileSrc:
-                "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-398x375.webp",
+                "/disco-misr-live-in-exhibition-world-bahrain/706x706.jpeg",
             },
           },
         ],
@@ -282,7 +282,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
         price: "ابتداءً من 22 BHD",
         dateRange: "الجمعة 13 نوفمبر 2026",
         image: {
-          src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-706x706.webp",
+          src: "/disco-misr-live-in-exhibition-world-bahrain/706x706.jpeg",
           alt: "ملصق عرض ديسكو مصر في مركز البحرين العالمي للمعارض",
         },
       },
