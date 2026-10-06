@@ -89,10 +89,284 @@ export type EventDetail = {
  * This is the single source of truth for all event data
  */
 export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDetail }> = {
+  "disco-misr-live-in-exhibition-world-bahrain": {
+    en: {
+      id: "disco-misr-live-in-exhibition-world-bahrain",
+      status: "in-progress",
+      heroContent: {
+        slug: "disco-misr-live-in-exhibition-world-bahrain",
+        slides: [
+          {
+            id: "disco-misr-1",
+            image: {
+              src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+              alt: "Disco Misr live in Exhibition World Bahrain",
+              mobileSrc:
+                "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+            },
+          },
+        ],
+        badge: "",
+        info: {
+          title: "Disco Misr live in Exhibition World Bahrain",
+          shortDescription:
+            "Get ready for an unforgettable night as Egyptian electronic sensation Disco Misr brings its nostalgic Arabic melodies, infectious disco beats, and electrifying live performance to Bahrain.",
+          location: "Exhibition World Bahrain, Sakhir, Kingdom of Bahrain",
+          locationUrl:
+            "https://maps.app.goo.gl/1pns2faxQXhSmXTs6",
+          ticketUrl:
+            "https://manama.platinumlist.net/event-tickets/108695/disco-misr-live-in-exhibition-world-bahrain",
+          date: "Fri 13 Nov 2026",
+          description: [
+            "Get ready for an unforgettable night as Disco Misr lands in Bahrain on November 13th, 2026 at Exhibition World Bahrain.",
+            "Known for blending nostalgic Arabic melodies with infectious disco beats, modern electronic production, and an electrifying live presence, Disco Misr has become one of the most exciting names in the Egyptian electronic music scene.",
+            "Taking over the Grand Hall at Exhibition World Bahrain, this high-energy fusion of retro Arabic vibes and contemporary sounds promises a night filled with dancing, sing-alongs, and unforgettable moments.",
+            "The night will also feature Keify Keda (feat. Wegz), adding another exciting dimension to an already highly anticipated musical experience.",
+            "Whether you're a longtime fan of Disco Misr or discovering their unique sound for the first time, this is your chance to experience their infectious energy live in Bahrain and enjoy a night of music, dancing, and unforgettable memories.",
+          ],
+          priceFrom: "22 BHD",
+        },
+      },
+      location: {
+        venueName: "Exhibition World Bahrain",
+        venueAddress:
+          "Exhibition World Bahrain, Block 1062, Road 6204, Sakhir, Kingdom of Bahrain",
+        directionsUrl:
+          "https://maps.app.goo.gl/1pns2faxQXhSmXTs6",
+        mapEmbedUrl: "",
+        byCarInstructions:
+          "Take Sheikh Khalifa Bin Salman Highway and merge onto Al Fateh Highway. Then, take Sheikh Isa Bin Salman Highway and follow the signs for Exhibition Avenue until you reach Exhibition World Bahrain.",
+        byTaxiInstructions:
+          "You can take a taxi to Exhibition World Bahrain from anywhere in Manama. It is a well-known destination and most drivers will be familiar with its location.",
+      },
+      topEvent: {
+        id: "disco-misr-live-in-exhibition-world-bahrain",
+        title: "Disco Misr live in Exhibition World Bahrain",
+        price: "From 22 BHD",
+        dateRange: "Fri 13 Nov 2026",
+        image: {
+          src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-706x706.webp",
+          alt: "Disco Misr live in Exhibition World Bahrain poster",
+        },
+      },
+      termsAndCondition: [
+        {
+          title: "Tickets and Entry",
+          items: [
+            "All tickets are non-refundable and non-transferable under any circumstances, except in case of event cancellation by the organizer.",
+            "Entry is permitted only with a valid ticket and matching ID.",
+            "The organizer reserves the right to deny entry to any guest who fails to comply with the event rules or behaves inappropriately.",
+          ],
+        },
+        {
+          title: "Event Schedule",
+          items: [
+            "The event will take place on Friday, November 13, 2026.",
+            "Doors open at 19:00 and the show starts at 21:00.",
+            "Guests are encouraged to arrive at least 30 minutes before showtime.",
+            "Late arrivals may be denied entry until an appropriate break in the performance.",
+          ],
+        },
+        {
+          title: "Photography and Recording",
+          items: [
+            "Photography, video recording, or live streaming is strictly prohibited during the performance.",
+            "The organizer reserves the right to remove any guest violating this rule.",
+          ],
+        },
+        {
+          title: "Age Restriction",
+          items: [
+            "The show is intended for audiences aged 18 years and above.",
+            "Guests under 18 years of age will not be admitted, even if accompanied by an adult.",
+          ],
+        },
+        {
+          title: "Code of Conduct",
+          items: [
+            "Guests are expected to behave respectfully toward the artists, staff, and other attendees.",
+            "Any disruptive or offensive behavior will result in immediate removal without refund.",
+          ],
+        },
+        {
+          title: "Liability Disclaimer",
+          items: [
+            "The organizer is not responsible for any personal injury, loss, or damage to personal property during the event.",
+            "Attendance is at the guest’s own risk.",
+          ],
+        },
+        {
+          title: "Event Changes",
+          items: [
+            "The organizer reserves the right to change the event date, time, venue, or lineup due to unforeseen circumstances.",
+            "In case of rescheduling, tickets will remain valid for the new date.",
+          ],
+        },
+        {
+          title: "Security and Safety",
+          items: [
+            "All guests are subject to security checks upon entry.",
+            "Dangerous or prohibited items, including weapons, alcohol, and outside food or drinks, are not allowed.",
+          ],
+        },
+        {
+          title: "Use of Media",
+          items: [
+            "By attending, guests consent to being photographed or recorded for promotional purposes related to the event or organizer.",
+          ],
+        },
+        {
+          title: "Organizer Information",
+          items: [
+            "Event organized by Pop Event’s W.L.L.",
+            "Kingdom of Bahrain.",
+            "Contact: +973 3888 3847 | popevents95@gmail.com",
+          ],
+        },
+      ],
+    },
+
+    ar: {
+      id: "disco-misr-live-in-exhibition-world-bahrain",
+      status: "in-progress",
+      heroContent: {
+        slug: "disco-misr-live-in-exhibition-world-bahrain",
+        slides: [
+          {
+            id: "disco-misr-1",
+            image: {
+              src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-1600x615.webp",
+              alt: "ديسكو مصر مباشر في مركز البحرين العالمي للمعارض",
+              mobileSrc:
+                "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-398x375.webp",
+            },
+          },
+        ],
+        badge: "",
+        info: {
+          title: "ديسكو مصر مباشر في مركز البحرين العالمي للمعارض",
+          shortDescription:
+            "استعدوا لليلة لا تُنسى مع فرقة ديسكو مصر الإلكترونية المصرية، التي تقدم مزيجاً مميزاً من الألحان العربية الكلاسيكية وإيقاعات الديسكو الحديثة في عرض مباشر ومليء بالطاقة في البحرين.",
+          location:
+            "مركز البحرين العالمي للمعارض، الصخير، مملكة البحرين",
+          locationUrl:
+            "https://www.google.com/maps/search/?api=1&query=Exhibition+World+Bahrain",
+          ticketUrl:
+            "https://manama.platinumlist.net/event-tickets/108695/disco-misr-live-in-exhibition-world-bahrain",
+          date: "الجمعة 13 نوفمبر 2026",
+          description: [
+            "استعدوا لليلة لا تُنسى مع ديسكو مصر في مملكة البحرين يوم 13 نوفمبر 2026 في مركز البحرين العالمي للمعارض.",
+            "تشتهر ديسكو مصر بمزج الألحان العربية الكلاسيكية والحنين إلى الماضي مع إيقاعات الديسكو النابضة والإنتاج الإلكتروني الحديث، لتقدم تجربة موسيقية مميزة وحيوية على المسرح.",
+            "سيستضيف القاعة الكبرى في مركز البحرين العالمي للمعارض هذا العرض المليء بالطاقة، حيث يلتقي الطابع العربي الكلاسيكي بالأصوات والإيقاعات المعاصرة في ليلة مليئة بالرقص والغناء والأجواء الاستثنائية.",
+            "كما يشارك في هذه الليلة Keify Keda بمشاركة Wegz، ليضيفا المزيد من الحماس إلى هذه التجربة الموسيقية المنتظرة.",
+            "سواء كنت من محبي ديسكو مصر منذ فترة طويلة أو تكتشف موسيقاهم للمرة الأولى، فهذه فرصتك للاستمتاع بطاقتهم المميزة مباشرة في البحرين وقضاء ليلة مليئة بالموسيقى والرقص واللحظات التي لا تُنسى.",
+          ],
+          priceFrom: "22 BHD",
+        },
+      },
+      location: {
+        venueName: "مركز البحرين العالمي للمعارض",
+        venueAddress:
+          "مركز البحرين العالمي للمعارض، مجمع 1062، طريق 6204، الصخير، مملكة البحرين",
+        directionsUrl:
+          "https://www.google.com/maps/search/?api=1&query=Exhibition+World+Bahrain",
+        mapEmbedUrl: "",
+        byCarInstructions:
+          "اسلك طريق الشيخ خليفة بن سلمان السريع ثم اندمج في طريق الفاتح. بعد ذلك اتبع طريق الشيخ عيسى بن سلمان السريع واتبع اللوحات الإرشادية المؤدية إلى شارع المعارض حتى تصل إلى مركز البحرين العالمي للمعارض.",
+        byTaxiInstructions:
+          "يمكن الوصول إلى مركز البحرين العالمي للمعارض بسيارة أجرة من أي مكان في المنامة، وهو وجهة معروفة ومن المرجح أن يكون السائق على دراية بموقعه.",
+      },
+      topEvent: {
+        id: "disco-misr-live-in-exhibition-world-bahrain",
+        title: "ديسكو مصر مباشر في مركز البحرين العالمي للمعارض",
+        price: "ابتداءً من 22 BHD",
+        dateRange: "الجمعة 13 نوفمبر 2026",
+        image: {
+          src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-706x706.webp",
+          alt: "ملصق عرض ديسكو مصر في مركز البحرين العالمي للمعارض",
+        },
+      },
+      termsAndCondition: [
+        {
+          title: "التذاكر والدخول",
+          items: [
+            "جميع التذاكر غير قابلة للاسترجاع أو التحويل تحت أي ظرف، باستثناء حالة إلغاء الفعالية من قبل المنظم.",
+            "يسمح بالدخول فقط بتذكرة سارية وهوية مطابقة.",
+            "يحتفظ المنظم بحق رفض دخول أي شخص لا يلتزم بقواعد الفعالية أو يتصرف بشكل غير لائق.",
+          ],
+        },
+        {
+          title: "جدول الفعالية",
+          items: [
+            "يقام الحدث يوم الجمعة 13 نوفمبر 2026.",
+            "تفتح الأبواب الساعة 19:00 ويبدأ العرض الساعة 21:00.",
+            "يُنصح بالحضور قبل موعد العرض بـ30 دقيقة على الأقل.",
+            "قد يتم تأخير دخول المتأخرين حتى فترة استراحة مناسبة أثناء العرض.",
+          ],
+        },
+        {
+          title: "التصوير والتسجيل",
+          items: [
+            "يُمنع منعاً باتاً التصوير أو تسجيل الفيديو أو البث المباشر أثناء العرض.",
+            "يحتفظ المنظم بحق إخراج أي شخص يخالف هذه التعليمات.",
+          ],
+        },
+        {
+          title: "قيود العمر",
+          items: [
+            "العرض مخصص للجمهور من عمر 18 عاماً فما فوق.",
+            "لن يُسمح بدخول من هم دون 18 عاماً حتى مع مرافقة شخص بالغ.",
+          ],
+        },
+        {
+          title: "قواعد السلوك",
+          items: [
+            "يُتوقع من جميع الحضور التعامل باحترام مع الفنانين والموظفين وبقية الحضور.",
+            "أي سلوك مزعج أو مسيء سيؤدي إلى الإخراج الفوري من المكان دون استرداد قيمة التذكرة.",
+          ],
+        },
+        {
+          title: "إخلاء المسؤولية",
+          items: [
+            "لا يتحمل المنظم مسؤولية أي إصابة شخصية أو فقدان أو تلف للممتلكات الشخصية أثناء الحدث.",
+            "الحضور إلى الحدث يكون على مسؤولية الضيف الخاصة.",
+          ],
+        },
+        {
+          title: "تغييرات الفعالية",
+          items: [
+            "يحتفظ المنظم بحق تغيير تاريخ الفعالية أو موعدها أو مكانها أو قائمة المشاركين بسبب ظروف غير متوقعة.",
+            "في حالة إعادة جدولة الفعالية، تظل التذاكر سارية للتاريخ الجديد.",
+          ],
+        },
+        {
+          title: "الأمن والسلامة",
+          items: [
+            "يخضع جميع الحضور للتفتيش الأمني عند الدخول.",
+            "يُمنع إدخال المواد الخطرة أو المحظورة، بما في ذلك الأسلحة والكحول والأطعمة أو المشروبات من خارج المكان.",
+          ],
+        },
+        {
+          title: "استخدام الوسائط",
+          items: [
+            "بالحضور إلى الفعالية، يوافق الضيوف على إمكانية تصويرهم أو تسجيلهم لأغراض ترويجية متعلقة بالفعالية أو المنظم.",
+          ],
+        },
+        {
+          title: "معلومات المنظم",
+          items: [
+            "الفعالية من تنظيم Pop Event’s W.L.L.",
+            "مملكة البحرين.",
+            "للتواصل: +973 3888 3847 | popevents95@gmail.com",
+          ],
+        },
+      ],
+    },
+  },
   "shawn-chidiac-live-in-exhibition-world-bahrain": {
     en: {
       id: "shawn-chidiac-live-in-exhibition-world-bahrain",
-      status: "in-progress",
+      status: "completed",
       heroContent: {
         slug: "shawn-chidiac-live-in-exhibition-world-bahrain",
         slides: [
@@ -1678,6 +1952,16 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
 export const mockHeroEvents: Record<'en' | 'ar', HeroEvent[]> = {
   en: [
     {
+      id: "disco-misr-live-in-exhibition-world-bahrain",
+      title: "Disco Misr live in Exhibition World Bahrain",
+      date: "Fri, 13 Nov 2026",
+      venue: "Exhibition World Bahrain",
+      image: {
+        src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+        alt: "Disco Misr live in Exhibition World Bahrain poster",
+      },
+    },
+    {
       id: "shawn-chidiac-live-in-exhibition-world-bahrain",
       title: "Shawn Chidiac live in Exhibition World Bahrain",
       date: "Fri, 30 Oct 2026",
@@ -1729,6 +2013,16 @@ export const mockHeroEvents: Record<'en' | 'ar', HeroEvent[]> = {
     // },
   ],
   ar: [
+    {
+      id: "disco-misr-live-in-exhibition-world-bahrain",
+      title: "ديسكو مصر مباشر في مركز البحرين العالمي للمعارض",
+      date: "الجمعة، 13 نوفمبر 2026",
+      venue: "مركز البحرين العالمي للمعارض",
+      image: {
+        src: "/disco-misr-live-in-exhibition-world-bahrain/disco-misr-live-in-exhibition-world-bahrain-2048x787.jpeg",
+        alt: "ملصق عرض ديسكو مصر في مركز البحرين العالمي للمعارض",
+      },
+    },
     {
       id: "shawn-chidiac-live-in-exhibition-world-bahrain",
       title: "شون شيدياك مباشر في مركز البحرين العالمي للمعارض",
