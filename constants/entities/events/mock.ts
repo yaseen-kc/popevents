@@ -555,7 +555,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
         price: "ابتداءً من 25 BHD",
         dateRange: "الجمعة 30 أكتوبر 2026",
         image: {
-          src: "/shawn-chidiac-live-in-exhibition-world-bahrain/shawn-chidiac-live-in-exhibition-world-bahrain-706x706.webp",
+          src: "/shawn-chidiac-live-in-exhibition-world-bahrain/shawn-chidiac-live-in-exhibition-world-bahrain-2048x2048.jpeg",
           alt: "ملصق عرض شون شيدياك في مركز البحرين العالمي للمعارض",
         },
       },

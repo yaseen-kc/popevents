@@ -11,6 +11,59 @@ import type { ArtistDetail } from "@/types/artists";
  * This is the single source of truth for all artist data
  */
 export const mockArtistDetailMap: Record<string, { en: ArtistDetail; ar: ArtistDetail }> = {
+  "disco-misr": {
+    en: {
+      id: "disco-misr",
+      name: "Disco Misr",
+      followers: "5.8K followers",
+      biography:
+        "Disco Misr is one of Egypt's most exciting electronic music acts, a Cairo-based DJ trio made up of Amr Emad, Mostafa El Sherif, and Schady Wasfy. Known for their distinctive fusion of nostalgic Egyptian classics with nu-disco, funk, deep house, Arabic pop, and modern electronic production, the trio has become a major force in the region's contemporary music scene. The project began around 2013 through performances at proms and private events before officially launching as DJ Disco Misr in 2014, when their creative mashups and remixes began gaining widespread attention. Disco Misr's signature sound transforms iconic songs by legendary Egyptian artists such as Om Kalthoum, Abdelhalim Hafez, Warda, and Sabah into energetic modern dance tracks. Their popular releases include Alf Leila We Leila Remix, Ahla Wahda, Keify Keda, Ana Negm Remix, Fe Eineh, and El Donia Risha F Hawa. Their music combines the nostalgia of Egypt's golden musical era with contemporary club energy, creating a live experience built around dancing, sing-alongs, and powerful electronic grooves. The trio has performed at major events across Egypt, Saudi Arabia, Europe, and the wider Middle East, including Balad Beast in Jeddah, A Thousand and One in Riyadh, Marbella Arena in Spain, and numerous major festivals and venues. With their distinctive ability to reinvent beloved Arabic classics for a new generation, Disco Misr continues to expand its international audience and establish itself as one of the region's most recognizable electronic music acts.",
+      image: {
+        src: "/artists/disco_misr.jpg",
+        alt: "Disco Misr performing live on stage",
+      },
+      events: [],
+    },
+    ar: {
+      id: "disco-misr",
+      name: "ديسكو مصر",
+      followers: "5.8 ألف متابع",
+      biography:
+        "ديسكو مصر هي واحدة من أبرز الفرق الموسيقية الإلكترونية في مصر، وهي فرقة دي جي مقرها القاهرة وتتكون من عمرو عماد ومصطفى الشريف وشادي وصفي. تشتهر الفرقة بمزيجها المميز من الكلاسيكيات المصرية والنو ديسكو والفانك والديب هاوس والبوب العربي والإنتاج الإلكتروني الحديث، وأصبحت واحدة من أبرز الأسماء في المشهد الموسيقي المعاصر في المنطقة. بدأت الرحلة حوالي عام 2013 من خلال حفلات التخرج والمناسبات الخاصة، قبل أن تنطلق الفرقة رسمياً باسم DJ Disco Misr في عام 2014، عندما بدأت الميكسات والريمكسات الخاصة بها في الانتشار بشكل واسع. يعتمد أسلوب ديسكو مصر المميز على إعادة تقديم الأغاني الشهيرة لأساطير الموسيقى المصرية مثل أم كلثوم وعبد الحليم حافظ ووردة وصباح في شكل مقطوعات راقصة حديثة وحيوية. ومن أشهر أعمالهم Alf Leila We Leila Remix وAhla Wahda وKeify Keda وAna Negm Remix وFe Eineh وEl Donia Risha F Hawa. تجمع موسيقاهم بين الحنين إلى العصر الذهبي للموسيقى المصرية والطاقة الحديثة للموسيقى الإلكترونية، لتقديم تجربة حية مليئة بالرقص والغناء والإيقاعات الإلكترونية القوية. وقد أحيت الفرقة حفلات وشاركت في فعاليات كبرى في مصر والسعودية وأوروبا والشرق الأوسط، بما في ذلك Balad Beast في جدة وA Thousand and One في الرياض وMarbella Arena في إسبانيا، إلى جانب العديد من المهرجانات والمسارح الكبرى. وبفضل قدرتها المميزة على إعادة تقديم الكلاسيكيات العربية المحبوبة لجيل جديد، تواصل ديسكو مصر توسيع جمهورها الدولي وترسيخ مكانتها كواحدة من أشهر الفرق الموسيقية الإلكترونية في المنطقة.",
+      image: {
+        src: "/artists/disco_misr.jpg",
+        alt: "ديسكو مصر تؤدي مباشرة على المسرح",
+      },
+      events: [],
+    },
+  },
+
+  "shawn-chidiac": {
+    en: {
+      id: "shawn-chidiac",
+      name: "Shawn Chidiac",
+      followers: "2.9K followers",
+      biography:
+        "Shawn Chidiac is a Canadian-Lebanese comedian and content creator known for his sharp observational humor, relatable storytelling, and viral comedy persona My Parents Are Divorced. Born in Canada and raised in a Lebanese family, Shawn's comedy draws heavily from his experiences navigating family relationships, cultural differences, dating, and everyday life across different cultures. His unique perspective as a Canadian-Lebanese comedian has helped him connect with audiences throughout the Middle East and internationally, particularly in Dubai, where he has built a strong presence in the comedy scene. Shawn's performances combine stand-up comedy, sketch comedy, and personal storytelling, turning familiar cultural experiences and family situations into highly relatable and entertaining material. His work frequently explores the contrast between Lebanese family culture and life in a multicultural environment, giving audiences a humorous perspective on identity, relationships, and modern life. Known for his viral online content as My Parents Are Divorced, Shawn has expanded his audience from social media into major live comedy venues and festivals. His notable performances include Laughing in Translation at the Shaw Theatre in London, Dubai's Most Wanted at Cadogan Hall in London, Same Same But Different at VOX Cinemas in Dubai, and WAEW at Zabeel Theatre. With a growing international audience and a distinctive comedic voice, Shawn Chidiac continues to establish himself as one of the region's promising comedy performers, bringing his raw, unfiltered, and culturally observant style to audiences around the world.",
+      image: {
+        src: "/artists/shawn_chidiac.jpeg",
+        alt: "Shawn Chidiac performing live on stage",
+      },
+      events: [],
+    },
+    ar: {
+      id: "shawn-chidiac",
+      name: "شون شيدياك",
+      followers: "2.9 ألف متابع",
+      biography:
+        "شون شيدياك هو كوميديان وصانع محتوى كندي من أصول لبنانية، معروف بكوميدياه القائمة على الملاحظات الذكية والقصص الواقعية وشخصيته الكوميدية الشهيرة My Parents Are Divorced. وُلد شون في كندا ونشأ في عائلة لبنانية، ويستمد الكثير من أعماله الكوميدية من تجاربه الشخصية في العلاقات العائلية والاختلافات الثقافية والمواعدة والحياة اليومية بين ثقافات متعددة. ساعده منظوره الفريد ككوميديان كندي لبناني على التواصل مع الجماهير في الشرق الأوسط وعلى المستوى الدولي، وخاصة في دبي حيث بنى حضوراً قوياً في مشهد الكوميديا. تجمع عروض شون بين الكوميديا الارتجالية والاسكتشات والقصص الشخصية، حيث يحول المواقف العائلية والتجارب الثقافية المألوفة إلى محتوى كوميدي قريب من الجمهور وممتع. وتتناول أعماله بشكل متكرر التباين بين الثقافة العائلية اللبنانية والحياة في بيئة متعددة الثقافات، مقدماً للجمهور منظوراً فكاهياً حول الهوية والعلاقات والحياة الحديثة. واشتهر شون بمحتواه المنتشر على وسائل التواصل الاجتماعي تحت شخصية My Parents Are Divorced، ثم وسع جمهوره من الإنترنت إلى المسارح الكبرى ومهرجانات الكوميديا. ومن أبرز عروضه Laughing in Translation في Shaw Theatre بلندن، وDubai's Most Wanted في Cadogan Hall بلندن، وSame Same But Different في VOX Cinemas بدبي، وWAEW في Zabeel Theatre. ومع نمو جمهوره الدولي وامتلاكه أسلوباً كوميدياً مميزاً، يواصل شون شيدياك ترسيخ مكانته كأحد الأصوات الكوميدية الواعدة في المنطقة، مقدماً أسلوبه العفوي والصريح وملاحظاته الثقافية الذكية للجماهير حول العالم.",
+      image: {
+        src: "/artists/shawn_chidiac.jpeg",
+        alt: "شون شيدياك يؤدي مباشرة على المسرح",
+      },
+      events: [],
+    },
+  },
   "mina-nader": {
     en: {
       id: "mina-nader",
