@@ -366,7 +366,7 @@ export const mockEventDetailMap: Record<string, { en: EventDetail; ar: EventDeta
   "shawn-chidiac-live-in-exhibition-world-bahrain": {
     en: {
       id: "shawn-chidiac-live-in-exhibition-world-bahrain",
-      status: "completed",
+      status: "in-progress",
       heroContent: {
         slug: "shawn-chidiac-live-in-exhibition-world-bahrain",
         slides: [
